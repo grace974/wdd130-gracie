@@ -1,0 +1,14 @@
+body{
+    background-color: lightblue;
+    text-align: center;
+}
+h1{
+    color: white;
+}
+ol{
+    color: black;
+}
+img{
+    margin: 0 auto;
+    height: 300px;
+}
