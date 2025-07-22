@@ -123,6 +123,7 @@ h4{
 }
 h2{
     margin: 0;
+    color: green;
 }
 footer .social img{
     padding-top: 15px;
@@ -131,9 +132,11 @@ footer .social img{
     margin: 200px 0;
 }
 .card-img{
-    border: 10px solid black;
+    border: 10px solid darkgreen;
     transition: transform .5s;
     box-shadow: 5px 5px 10px #6f7364;
+    height: 250px;
+    width: 350px;
 }
 .card-img:hover{
     opacity: .6;
@@ -205,6 +208,9 @@ main section img{
     grid-column: 2/7;
     grid-row: 5/8;
     box-shadow: 5px 5px 10px #6f7364;
+}
+p{
+    color: green;
 }
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
