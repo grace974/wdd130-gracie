@@ -1,4 +1,5 @@
-* {
+
+   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,75 +9,168 @@
     font-family: sans-serif;
     line-height: 1.6;
     color: #333;
+    background: #fff;
   }
   
   .header {
-    background: #eee;
-    padding: 1em 2em;
+    background: #f4f4f4;
+    padding: 1.5em 2em;
   }
   
   .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1em;
   }
   
   .nav-links a {
-    margin-right: 1em;
     text-decoration: none;
     color: #000;
+    font-weight: 500;
   }
   
-  .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-    height: 150px;
-    width: auto;
-      
+  .logo img {
+    width: 250px;
+    height: auto;
   }
   
   .search input {
     padding: 0.4em;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 1em;
   }
   
+
   .hero {
-    background: #ddd;
-    padding: 2em;
     text-align: center;
+    margin-top: 1em;
+    padding: 0;
+  }
+  
+  .hero-banner {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+  
+  .hero-image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    padding: 2em 1em;
+    background: #ddd;
   }
   
   .hero-image img {
-    width: auto;
-    height: 400px;
+    flex: 1 1 300px;
+    max-width: 45%;
+    height: auto;
     object-fit: cover;
-    margin: 20px;
   }
   
-  .main-content {
+  .main-content,
+  .intro-text {
     padding: 2em;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
   }
   
-  .main-content p {
+  .main-heading {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+  
+  .subheading {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 2em;
+  }
+  
+  .main-content h1 {
+    font-size: 2em;
+    margin: 1.5em 0 0.5em;
+  }
+  
+  .main-content p,
+  .intro-text p {
     margin-bottom: 1.5em;
+    color: #444;
   }
   
+  .centered-image,
   .large-image {
-    background: #ccc;
-    padding: 2em;
     text-align: center;
+    margin: 2em 0;
   }
   
+  .centered-image img,
   .large-image img {
+    display: block;
+    margin: 0 auto;
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
+    height: auto;
+  }
+  
+  .card-row,
+  .blog-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    padding: 2em 1em;
+  }
+  
+  .card {
+    background: #eee;
+    border: 1px solid #888;
+    max-width: 300px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+  }
+  
+  .card h2,
+  .title {
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+  }
+  
+  .card p,
+  .card-content p {
+    font-size: 0.95em;
+    margin-bottom: 0.5em;
+    color: #555;
+  }
+  
+  .card a,
+  .card-content a {
+    color: #000;
+    text-decoration: underline;
+    font-size: 0.9em;
+    margin-top: auto;
   }
   
   .footer {
-    background: #f8f8f8;
+    background: #f4f4f4;
     padding: 2em;
     margin-top: 2em;
   }
@@ -85,12 +179,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-  }
-  
-  .footer-logo {
-    font-weight: bold;
-    font-size: 1.2em;
-    margin-bottom: 1em;
+    gap: 2em;
   }
   
   .footer-columns {
@@ -105,6 +194,7 @@
   
   .column h4 {
     margin-bottom: 0.5em;
+    font-weight: bold;
   }
   
   .column a {
@@ -114,195 +204,42 @@
   }
   
   .social-icons {
-    margin-top: 1em;
     text-align: center;
+    margin-top: 1em;
   }
   
   .social-icons a {
+    display: inline-block;
     margin: 0 0.5em;
-    font-size: 1.2em;
-    text-decoration: none;
-  }
-  .intro-text {
-    text-align: center;
-    margin: 2em auto;
-    padding: 0 1em;
   }
   
-  .intro-text .tagline {
-    color: gray;
-    font-size: 0.9em;
-  }
-  
-  .intro-text .main-heading {
-    font-size: 2em;
-    margin: 0.5em 0;
-  }
-  
-  .intro-text .subheading {
-    color: #555;
-    font-size: 1em;
-  }
-  
-  .blog-cards {
-    display: flex;
-    gap: 2em;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 2em;
-  }
-  
-  .card {
-    border: 1px solid #888;
-    max-width: 300px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .card-image img {
-    width: 100%;
+  .social-icons img {
+    width: 32px;
     height: auto;
   }
   
-  .card-content {
-    padding: 1em;
-  }
-  
-  .card-content .category {
-    font-size: 0.8em;
-    color: gray;
-  }
-  
-  .card-content .title {
-    font-weight: bold;
-    margin: 0.5em 0;
-  }
-  
-  .card-content a {
-    color: #000;
-    text-decoration: underline;
-    font-size: 0.9em;
-  }
-  .hero {
-    text-align: center;
-    margin-top: 1em;
-  }
-  
-  .hero-banner {
-    width: 100%;
-    max-width: 1000px;
-    height: auto;
-  }
-  
-  .centered-image {
-    text-align: center;
-    margin: 2em 0;
-  }
-  .centered-image img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .card-row {
-    display: flex;
-    gap: 2em;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 2em 1em;
-  }
-  
-  .card {
-    max-width: 300px;
-    text-align: left;
-  }
-  
-  .card img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 1em;
-  }
-  .card h2 {
-    font-size: 1.1em;
-    margin-bottom: 0.5em;
-  }
-  
-  .card p {
-    font-size: 0.95em;
-    margin-bottom: 0.5em;
-  }
-  
-  .card a {
-    text-decoration: underline;
-    font-size: 0.9em;
-    color: #000;
-  }
+
   @media (max-width: 768px) {
-    .nav {
+    .nav,
+    .footer-content,
+    .footer-columns,
+    .card-row,
+    .blog-cards {
       flex-direction: column;
-      align-items: flex-start;
-      gap: 1em;
-    }
-  
-    .logo img {
-      height: 150px;
-    }
-  
-    .footer-content {
-      flex-direction: column;
+      align-items: center;
       gap: 1.5em;
-    }
-  
-    .footer-columns {
-      flex-direction: column;
-    }
-  
-    .main-content {
-      padding: 1em;
     }
   
     .search input {
       width: 100%;
     }
-    .blog-cards {
-        flex-direction: column;
-        align-items: center;
-      }
-    
-      .nav {
-        flex-direction: column;
-        gap: 1em;
-        align-items: flex-start;
-      }
-    
-      .logo img {
-        height: 150px;
-      }
-    
-      .footer-content {
-        flex-direction: column;
-        gap: 1.5em;
-      }
-    
-      .footer-columns {
-        flex-direction: column;
-      }
-      .card-row {
-        flex-direction: column;
-        align-items: center;
-      }
-    
-      .nav {
-        flex-direction: column;
-        gap: 1em;
-        align-items: flex-start;
-      }
-    
-      .footer-content {
-        flex-direction: column;
-        gap: 1.5em;
-      }
-    
-      .footer-columns {
-        flex-direction: column;
-      }
-}
+  
+    .logo img {
+      width: 200px;
+    }
+  
+    .hero-image img {
+      max-width: 100%;
+    }
+  }
+  
